@@ -34,17 +34,16 @@ public class MagicBox<T> {
         for (int i = 0; i < this.items.length; i++) {
             if (this.items[i] == null) {
                 throw new RuntimeException("Коробка " + this.name + " не полна! Количество ячеек которые необходимо заполнить = " + emptyCell);
-            } else {
-                Random random = new Random();
-                randomInt = random.nextInt(this.size);
             }
         }
+        Random random = new Random();
+        randomInt = random.nextInt(this.size);
         return this.items[randomInt];
     }
 
     public void getItems() {
         System.out.println(Arrays.toString(this.items));
-        }
+    }
 }
 
 
